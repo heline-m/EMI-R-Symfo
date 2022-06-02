@@ -1,5 +1,9 @@
 <?php
 
-if (file_exists(dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php')) {
-    require dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php';
-}
+use App\Kernel;
+
+require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
+
+return function (array $context) {
+    return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
+};

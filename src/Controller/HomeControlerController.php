@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomeControlerController extends AbstractController
 {
-    #[Route('/', name: 'home')]
+    #[Route('/accueil', name: 'accueil')]
     public function index(): Response
     {
        // $repository=$this->getDoctrine()->getRepository(Categorie::class);

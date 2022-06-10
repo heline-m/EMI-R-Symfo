@@ -21,3 +21,5 @@
 .phpunit.result.cache
 ###< phpunit/phpunit ###
 
+.idea/
+.idea/workspace.xml
